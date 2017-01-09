@@ -1,0 +1,34 @@
+libname rang "/folders/myfolders";
+
+data rang.europeancars;
+	set sashelp.cars;
+	where origin = "Europe";
+run;
+
+proc print data = rang.europeancars;
+run;
+
+proc print data = sashelp.cars;
+run;
+
+data uspresidents;
+	input president $ party $ number;
+	datalines;
+	adams f 2
+	lincoln r 16
+	grant r 18
+	;
+run;
+
+data work.sales2_dta;
+	infile "/folders/myfolders/sales1.csv" DSD MISSOVER FIRSTOBS=2;
+	INPUT Employee_ID First_Name $ Last_Name $ Gender :$1. Salary Job_Title :$25. Country :$2.
+	Birth_Date :date. Hire_Date :mmddyy.;
+RUN;
+
+
+DATA distance;
+Miles = 26.22;
+Kilometers = 1.61 * Miles;
+PROC PRINT DATA = distance;
+RUN;

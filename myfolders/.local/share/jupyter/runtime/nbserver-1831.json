@@ -1,0 +1,9 @@
+{
+  "hostname": "localhost",
+  "secure": false,
+  "url": "http://localhost:8888/",
+  "base_url": "/",
+  "pid": 1831,
+  "notebook_dir": "/mnt/hgfs/myfolders",
+  "port": 8888
+}
